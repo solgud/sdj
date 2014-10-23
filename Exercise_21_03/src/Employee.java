@@ -34,6 +34,7 @@ public class Employee extends Person
    }
 
    // Return a String representation
+   @Override
    public String toString()
    {
       return this.getName() + ", " + this.getAge() + ", " + this.getSalary();
