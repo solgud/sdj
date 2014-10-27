@@ -33,7 +33,7 @@ public class TextMessage extends BillableItem
    @Override
    public double getPrice()
    {
-      return getPrice();
+      return this.smsPrice + this.extraCharges;
    }
 }
 

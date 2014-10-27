@@ -27,7 +27,7 @@ public class PhoneCall extends BillableItem
       return this.pricePerMinute;
    }
    
-   // Implement the getPrice outlined in the UML diagram
+   // Implement the getPrice from the abstract superclass
    @Override
    public double getPrice()
    {
