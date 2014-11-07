@@ -11,6 +11,8 @@ import javax.swing.JTextField;
 
 public class ConverterWindow extends JFrame
 {
+   private static final long serialVersionUID = 1L;
+
    // Declare window elements
    private JTextField textField;
    private JButton button;
