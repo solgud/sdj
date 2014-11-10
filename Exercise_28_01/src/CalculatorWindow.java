@@ -26,7 +26,7 @@ public class CalculatorWindow extends JFrame
       // Give it a box layout
       textPanel.setLayout(new BoxLayout(textPanel, BoxLayout.X_AXIS));
       // Add a generic text field
-      textPanel.add(new TextField());
+      textPanel.add(new JTextField());
       // Add to the North of the window (won't resize)
       add(textPanel, BorderLayout.NORTH);
 
