@@ -1,16 +1,8 @@
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.GridLayout;
+import java.awt.*;
+import java.awt.event.*;
 
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.BoxLayout;
-import javax.swing.ButtonGroup;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JRadioButton;
-import javax.swing.border.Border;
+import javax.swing.*;
+import javax.swing.border.*;
 
 public class ColorDemo extends JFrame
 {
@@ -21,11 +13,12 @@ public class ColorDemo extends JFrame
       // Set up window
       super("Color Demo");
       setLayout(new GridLayout(1, 3, 5, 5));
-      
+      setDefaultCloseOperation(EXIT_ON_CLOSE);
+
       // Set up the background color picker
       JPanel backgroundPanel = new JPanel();
       backgroundPanel.setLayout(new GridLayout(4,1));
-      
+
       // Add radio buttons to the panel
       // Making a button group to make only one radio button selectable at a time
       ButtonGroup backgroundButtonGroup = new ButtonGroup();
@@ -39,11 +32,11 @@ public class ColorDemo extends JFrame
       }
       // Set a title for the background panel
       backgroundPanel.setBorder(BorderFactory.createTitledBorder("Background"));
-      
+
       // Set up the foreground color picker
       JPanel foregroundPanel = new JPanel();
       foregroundPanel.setLayout(new GridLayout(4,1));
-      
+
       // Add radio buttons to the panel
       // Making a button group to make only one radio button selectable at a time
       ButtonGroup foregroundButtonGroup = new ButtonGroup();
@@ -57,7 +50,7 @@ public class ColorDemo extends JFrame
       }
       // Set a title for the foreground panel
       foregroundPanel.setBorder(BorderFactory.createTitledBorder("Foreground"));
-      
+
       // Set up the results panel
       // Create an outer results panel 
       // that controls the outer border/padding
@@ -78,27 +71,54 @@ public class ColorDemo extends JFrame
       innerResultsPanel.add(Box.createHorizontalGlue());
       innerResultsPanel.add(new JLabel("Text"));
       innerResultsPanel.add(Box.createHorizontalGlue());
-      
+
       // Add the inner panel to the outer
       outerResultsPanel.add(innerResultsPanel, BorderLayout.CENTER);
-      
+
       // Set default settings for the results panel
       innerResultsPanel.setForeground(Color.black);
       innerResultsPanel.setBackground(Color.green);
-      
-      
+
       // Add the three main panels to the window
       add(backgroundPanel);
       add(foregroundPanel);
       add(outerResultsPanel);
       pack();
+
+
+      // Make a menu bar
+      JMenuBar menuBar = new JMenuBar();
+      
+      // Make a file option to go under the menu bar
+      JMenu fileMenu = new JMenu("File");
+      
+      // Make a close item to go under the file option
+      JMenuItem closeItem = new JMenuItem("Close");
+      // Attach an event listener to the close item
+      closeItem.addActionListener(new CloseListener());
+      
+      // Add the close item to the file option
+      fileMenu.add(closeItem);
+      // Add the file option to the menu bar
+      menuBar.add(fileMenu);
+      
+      // Add the menu bar to the window
+      this.setJMenuBar(menuBar);
    }
-   
-   
+
    public static void main(String[] args)
    {
       JFrame frame = new ColorDemo();
       frame.setVisible(true);
    }
 
+   // Event listener for the close button
+   private class CloseListener implements ActionListener
+   {
+      @Override
+      public void actionPerformed(ActionEvent e)
+      {
+         ColorDemo.this.dispose();
+      }
+   }
 }
