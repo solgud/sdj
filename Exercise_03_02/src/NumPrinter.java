@@ -58,8 +58,8 @@ public class NumPrinter
       {
          System.out.println("You can't do that!!!");
       }
-
       
+      keyboard.close();
    }
 
 }

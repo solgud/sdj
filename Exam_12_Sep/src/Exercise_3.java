@@ -52,6 +52,7 @@ public class Exercise_3
          System.out.println("Match no " + (i+1) + ": " + results[i]);
       }
 
+      keyboard.close();
    }
 
 }

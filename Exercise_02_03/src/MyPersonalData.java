@@ -31,6 +31,7 @@ public class MyPersonalData
       System.out.println("Name: " + name);
       System.out.println("Age: " + age);
       System.out.println("Address: " + address);
+      keyboard.close();
    }
    
 }

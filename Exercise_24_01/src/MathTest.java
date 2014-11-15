@@ -21,6 +21,7 @@ public class MathTest
       }
       System.out.println("x * y = " + (x*y));
 
+      scanner.close();
    }
 
 }

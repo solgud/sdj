@@ -35,6 +35,8 @@ public class Division
          // Print the result
          System.out.println("Quotient is: " + quotient);
       }
+      keyboard.close();
+
    }
 
 }

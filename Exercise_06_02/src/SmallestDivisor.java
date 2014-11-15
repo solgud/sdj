@@ -15,6 +15,7 @@ public class SmallestDivisor
       divisor++;
       }
       System.out.println(divisor);
+      keyboard.close();   
    }
 
 }

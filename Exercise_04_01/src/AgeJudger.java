@@ -41,6 +41,7 @@ public class AgeJudger
          System.out.println("You are a senior citizen");
       }
       
+      keyboard.close();
    }
 
 }

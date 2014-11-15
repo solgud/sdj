@@ -29,6 +29,7 @@ public class IntReader
       
       // Print the product - also doing maths in the statement
       System.out.println("Product: " + (a*b*c));
+      keyboard.close();
    }
 
 }

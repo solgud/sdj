@@ -23,6 +23,7 @@ public class GenderTest
          System.out.print("Male");
       else
          System.out.print("Not a Male");
+      input.close();
    }
 
 }

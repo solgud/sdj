@@ -38,6 +38,7 @@ public class CityPrint
       System.out.println(city + " in upper case: " + upperName);
       System.out.println(city + " in lower case: " + lowerName);
       System.out.println("First character in " + city + ": " + firstChar);
+      keyboard.close();
    }
 
 }

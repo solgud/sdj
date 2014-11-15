@@ -48,5 +48,6 @@ public class Areas_Printer
          // Print area using getArea method
          System.out.println("Area for rectangle " + (i+1) + " is: " + rectangleArray[i].getArea());
       }
+      key.close();
    }
 }

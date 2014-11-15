@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.swing.text.NumberFormatter;
-
 
 public class Squares
 {
@@ -32,6 +30,7 @@ public class Squares
          // Print out value, a tab, and the square
          System.out.println(number + "\t|\t" + (int) Math.pow(number, 2));
       }
+      key.close();
    }
 
 }

@@ -34,6 +34,7 @@ public class OccupancyRate
       
       System.out.println("Occupancy rate is: " + (int) (occupancyRate * 100) + "%");
       
+      key.close();
       
    }
 

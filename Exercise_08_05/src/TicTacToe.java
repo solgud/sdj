@@ -45,5 +45,6 @@ public class TicTacToe
          if (i < (board.length -1))
             System.out.println("-----------");
       }
+      key.close();
    }
 }

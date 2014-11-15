@@ -1,7 +1,12 @@
 
 public class ExceededMaximumItemsException extends Exception
 {
-   public ExceededMaximumItemsException(String message)
+   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+public ExceededMaximumItemsException(String message)
    {
       super(message);
    }

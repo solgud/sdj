@@ -28,6 +28,7 @@ public class ArrayDoubler_userinput
          System.out.printf("Value at space %d is now %.2f \n", count+1, collection[count]);
       }
 
+      key.close();
    }
 
 }

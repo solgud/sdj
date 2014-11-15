@@ -39,6 +39,7 @@ public class PenniesForPay
       }
 
       System.out.println("***** Total pay is: " + df.format(totalPay) + " *****");
+      key.close();
    }
 
 }

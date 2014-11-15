@@ -31,7 +31,9 @@ public class Payroll
       // Display the result
       System.out.println("Hello " + name);
       System.out.println("Your gross pay is $" + grossPay);
-      
+     
+      keyboard.close();
+
    }
 
 }

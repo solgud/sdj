@@ -52,5 +52,6 @@ public class TimesTable
          // Print each row on a new line
          System.out.println();
       }
+      key.close();
    }
 }

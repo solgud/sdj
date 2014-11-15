@@ -45,5 +45,6 @@ public class ComputeDistances
         System.out.printf("(%d, %d) and (%d, %d)\n", xCoordinates[i], yCoordinates[i], xCoordinates[i+1], yCoordinates[i+1]);
         System.out.println("is: " + distance);
      }
+     key.close();
    }
 }

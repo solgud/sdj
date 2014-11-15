@@ -2,7 +2,12 @@
 public class IllegalGradeException extends RuntimeException
 {
 
-   public IllegalGradeException()
+   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+public IllegalGradeException()
    {
    }
 

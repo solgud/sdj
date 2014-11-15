@@ -33,6 +33,7 @@ public class To_n
       // This is one way way to filter out the comma I put after every number in the loop
       System.out.println(n);
       
+      keyboard.close();   
    }
 
 }

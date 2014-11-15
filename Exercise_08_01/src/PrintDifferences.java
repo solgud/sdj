@@ -37,5 +37,6 @@ public class PrintDifferences
             System.out.println("Difference between value " + i + " and value " + (i+1) + " is: " + diff);
          }
       }
+      key.close();
    }
 }

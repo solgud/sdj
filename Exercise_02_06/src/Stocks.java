@@ -55,6 +55,7 @@ public class Stocks
       
       // Find profit
       System.out.println("Amount of profit made: " + ((sellAmount - sellCommission) - (purchaseAmount + purchaseCommission)));
+      keyboard.close();   
    }
 
 }

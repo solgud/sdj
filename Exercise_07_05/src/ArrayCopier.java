@@ -35,6 +35,7 @@ public class ArrayCopier
       // How do they look?
       System.out.println("Original array: " + Arrays.toString(collection));
       System.out.println("Original array: " + Arrays.toString(collection_copy));
+      key.close();
    }
 
 }

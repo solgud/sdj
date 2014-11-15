@@ -39,5 +39,6 @@ public class FatGram
          // Multiply by 100 to turn from decimal to percent
          System.out.println("Percent of calories from fat: " + (int) (100 * percentCaloriesFromFat) + "%");
       }
+      keyboard.close();
    }
 }

@@ -35,7 +35,8 @@ public class PayrollWithTax
       // Display the result
       System.out.println("Hello " + name);
       System.out.println("Your gross pay is $" + (grossPay - (grossPay * taxRate)));
-      
+
+      keyboard.close();   
    }
 
 }

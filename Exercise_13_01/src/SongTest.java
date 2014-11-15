@@ -82,6 +82,7 @@ public class SongTest
       // song4 is excluded because it is null and this gives an error **+ song4.getLength()
       double average = (song1.getLength() + song2.getLength() + song3.getLength()) / 4; 
       System.out.println("Average length of songs is " + average);
+      key.close();
    }
 
 }

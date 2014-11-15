@@ -6,7 +6,11 @@ import javax.swing.border.*;
 
 public class ColorDemo extends JFrame
 {
-   private String[] colorNames = {"Red", "Blue", "Green", "Black"};
+   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+private String[] colorNames = {"Red", "Blue", "Green", "Black"};
 
    public ColorDemo()
    {

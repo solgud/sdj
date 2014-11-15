@@ -43,6 +43,7 @@ public class PasswordRevealer
       System.out.println("\nUsername: " + username);
       System.out.println("Password: " + password);
 
+      key.close();
    }
 
 }

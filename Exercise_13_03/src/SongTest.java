@@ -53,6 +53,7 @@ public class SongTest
          totalLength += songs[i].getLength();
       }
       System.out.println("Average length of songs: " + (double) totalLength / songs.length);
+      key.close();
    }
 
 }

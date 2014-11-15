@@ -71,5 +71,6 @@ public class NumberSorter
          // b is greater than a, but a is greater than c
          System.out.println("BAC");
       }
+      keyboard.close();
    }
 }

@@ -45,5 +45,6 @@ public class GoodStringCompare
       {
          System.out.println(name1 + " and " + name3 + " are NOT the same.");
       }
+      keyboard.close();
    }
 }

@@ -63,5 +63,6 @@ public class Exercise_2
          }
          System.out.println("*****");
       }
+      keyboard.close();
    }
 }

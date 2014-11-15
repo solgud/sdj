@@ -18,6 +18,7 @@ public class BadCode
      else 
         y = 100; // Set default value for y
      System.out.println(y);
+     input.close();
    }
 
 }

@@ -47,6 +47,7 @@ public class QuadraticEquation
          System.out.println("Solution one is: " + solution);
          System.out.println("Solution two is: " + solution2);
       }
+      keyboard.close();   
    }
 
 }

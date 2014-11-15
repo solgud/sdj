@@ -51,6 +51,7 @@ public class Accumulations_userinput
       System.out.printf("Maximum is: %.2f \n", maximum);
       System.out.printf("Product is: %.2f \n", product);
       System.out.printf("Average is: %.2f \n", average);
+      key.close();
    }
 
 }

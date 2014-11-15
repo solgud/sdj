@@ -66,6 +66,7 @@ public class RomanNumerals
          // Otherwise, print an error
          System.out.println("Error! Not between 1-10");
       }
+      keyboard.close();   
    }
 
 }

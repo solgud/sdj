@@ -29,6 +29,7 @@ public class Algorithm_2
       } while (userConfirmation == 'y');
       
       System.out.println("Thank you for playing!");
+      key.close();
    }
 
 }

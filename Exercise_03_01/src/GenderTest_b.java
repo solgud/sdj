@@ -47,6 +47,7 @@ public class GenderTest_b
             // Under 18, Male -> Boy
             System.out.print("Boy");
       }
+      input.close();
    }
 
 }

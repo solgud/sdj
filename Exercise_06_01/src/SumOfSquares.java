@@ -24,6 +24,7 @@ public class SumOfSquares
       }
       System.out.println("Sum of squares from 1 to " + n + " is: " + sum);
       
+      key.close();
    }
 
 }

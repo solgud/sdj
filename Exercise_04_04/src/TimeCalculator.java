@@ -37,6 +37,7 @@ public class TimeCalculator
          days = seconds / 86400;
          System.out.println("Number of days: " + days);
       }
+      keyboard.close();   
    }
 
 }

@@ -54,6 +54,7 @@ public class ECTS_b
          // If it wasn't set (still is null), return an error
          System.out.println("Grade: " + ects + " is off of the ECTS scale.");
       }
+      keyboard.close();
    }
 
 }

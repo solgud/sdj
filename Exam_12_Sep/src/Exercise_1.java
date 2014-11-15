@@ -59,6 +59,7 @@ public class Exercise_1
          System.out.println("Result is: " + resultTie);
       }
 
+      keyboard.close();
    }
 
 }

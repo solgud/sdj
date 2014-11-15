@@ -45,5 +45,6 @@ public class NumberGuesser
       
       // If loop ends, it's because user guessed correctly
       System.out.println("\nYou got it! The value was: " + target);
+      key.close();
    }
 }

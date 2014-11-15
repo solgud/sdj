@@ -10,6 +10,7 @@ public class Statements
       int x, y, z, hours;
       double payRate;
       char myCharacter;
+      z = 0;
       
       // 4.1
       y = 30;
@@ -21,6 +22,7 @@ public class Statements
       payRate = 75;
       if (hours > 40)
          payRate *= 1.5;
+      System.out.println("Payrate: " + payRate);
       
       // 4.5
       x = 100;
@@ -29,7 +31,7 @@ public class Statements
          y = 20;
          z = 40;
       }
-           
+      x = z < 0 ? 4 : 3; 
       // 4.7
       myCharacter = 'D';
       if (myCharacter == 'D')

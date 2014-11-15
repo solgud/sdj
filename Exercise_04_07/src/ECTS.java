@@ -65,5 +65,6 @@ public class ECTS
          // Otherwise, return an error
          System.out.println("Grade: " + grade + " is off of the 7-grade scale.");
       }
+      keyboard.close();
    }
 }

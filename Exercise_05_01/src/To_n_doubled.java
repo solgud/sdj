@@ -35,7 +35,7 @@ public class To_n_doubled
       // I could also use an if statement in the loop
       System.out.print(n * 2);
       
-      
+      key.close();
    }
 
 }

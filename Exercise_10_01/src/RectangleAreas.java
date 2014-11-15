@@ -1,4 +1,3 @@
-import java.text.DecimalFormat;
 import java.util.Scanner;
 
 
@@ -40,6 +39,7 @@ public class RectangleAreas
       {
          System.out.printf("Area of rectangle %d is: %.2f %n", (i+1), (width[i] * height[i]));
       }
+      key.close();
    }
 
 }
