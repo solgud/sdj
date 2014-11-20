@@ -61,8 +61,6 @@ public class EmployeeList {
 	}
 	
 	public String toString() {
-		// NOTE: probably a sloppy implementation
-		// One day I will come back to this, shake my head, and clean it up
 		String stringToReturn = "Current number of employees: " + this.employees.size() + ", \n"
 				+ "Maximum number of employees: " + this.size + ", \n";
 		// Loop through the array
@@ -79,7 +77,6 @@ public class EmployeeList {
 		}
 		EmployeeList other = (EmployeeList) obj;
 
-		// WARNING: probably too complicated to be an optimal solution...
 		// Flag for array equality
 		boolean arraysAreEqual = true;
 		// Loop through the ArrayLists
@@ -88,6 +85,7 @@ public class EmployeeList {
 			if (!(this.employees.get(i).equals(other.employees.get(i)))) {
 				// Set the flag to false
 				arraysAreEqual = false;
+				break;
 			}
 		}
 		return this.size == other.size && arraysAreEqual;
