@@ -26,6 +26,7 @@ public class EmployeeList {
 	}
 	
 	// Find and remove a specific employee by reference
+	// Pretty sure the remove() method in the ArrayList would do as well
 	public void removeEmployee(Employee employee) {
 		for (int i = 0; i < this.employees.size(); i++) {
 			if (this.employees.get(i).equals(employee)) {
