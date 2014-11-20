@@ -24,6 +24,7 @@ public class PhoneBillFile {
 		}
 	}
 
+	// Read a Phonebill object from a binary file
 	public PhoneBill readPhoneBill() throws IOException
 	{
 		// Create an input stream to the file
@@ -41,5 +42,23 @@ public class PhoneBillFile {
 		}
 	}
 
+	// Write details of a PhoneBill object to a text file
+	public void writePhoneBillToText(PhoneBill bill, String textFileName)
+	{
+		try {
+			PrintWriter out = new PrintWriter(new FileOutputStream(textFileName));
+			try {
+				out.println("Phone Number: " + bill.getPhoneNo());
+				out.println("Number of items: " + bill.getNumberOfItems());
+				out.println("Phone call minutes: " + bill.getPhoneCallMinutes());
+				out.println("Amount due: " + bill.getAmountDue());
+			}
+			finally {
+				out.close();
+			}
+		} catch (IOException e) {
+			System.out.println("Error writing to file");
+		}
+	}
 
 }

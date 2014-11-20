@@ -1,0 +1,4 @@
+Phone Number: 8675309
+Number of items: 2
+Phone call minutes: 30.0
+Amount due: 3.15
