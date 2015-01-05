@@ -18,8 +18,6 @@ public class FileReader
       // Open a stream
       // Open a file
       System.out.println("Enter filename: ");
-      try {
-         fileName = keyboard.nextLine();
 
       
       // Loop through the file
