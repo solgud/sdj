@@ -1,7 +1,7 @@
 import cd.controller.CdController;
 import cd.domain.mediator.CdModel;
 import cd.domain.mediator.CdModelManager;
-import cd.view.CdConsole;
+import cd.view.CdGUI;
 import cd.view.CdView;
 
 public class Main
@@ -11,7 +11,7 @@ public class Main
 		try
 		{
 			CdModel model = new CdModelManager();
-			CdView view = new CdConsole();
+			CdView view = new CdGUI();
 			CdController controller = new CdController(model, view);
 
 			view.start(controller);

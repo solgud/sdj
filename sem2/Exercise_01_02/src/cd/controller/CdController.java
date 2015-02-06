@@ -27,8 +27,8 @@ public class CdController
 			this.view.show("Add method - not implemented");
 			break;
 		case "Remove":
-			String input = this.view.get("Title");
-			if (input.length() == 0)
+			String input = this.view.get("title");
+			if (input == null)
 				return;
 			String msg = "";
 			Cd cd = this.model.removeCD(input);
@@ -43,20 +43,21 @@ public class CdController
 			this.view.show(msg);
 			break;
 		case "Search":
-			input = this.view.get("Title");
-			if (input == null)
+			String searchInput = this.view.get("title");
+			if (searchInput == null)
 				return;
-			msg = "";
-			CdList list = this.model.getCD(input);
+			String searchMsg = "";
+			
+			CdList list = this.model.getCD(searchInput);
 			for (int i = 0; i < list.getNumberOfCds(); i++)
 			{
-				msg += list.getCD(i) + "\n";
+				searchMsg += list.getCD(i) + "\n";
 			}
 			if (list.getNumberOfCds() == 0)
 			{
-				msg = "No CD with title: \"" + input + "\" found";
+				searchMsg = "No CD with title: \"" + searchInput + "\" found";
 			}
-			this.view.show(msg);
+			this.view.show(searchMsg);
 			break;
 		case "Quit":
 			System.out.println("Quit");
