@@ -1,0 +1,68 @@
+package cd.controller;
+
+import cd.domain.mediator.CdModel;
+import cd.view.CdView;
+
+public class CdController 
+{
+	private CdModel model;
+	public CdController(CdModel model, CdView view)
+	{
+		
+	}
+	
+	public void execute(String what)
+	{
+         switch (what)
+         {
+            case "List":
+               show("" + this.cdList);
+               break;
+            case "Add":
+               show("Add method - not implemented");
+               break;
+            case "Remove":
+               String input = get("Title");
+               if (input.length() == 0)
+                  return;
+               String msg = "";
+               Cd cd = cdList.removeFirstCdByTitle(input);
+               if (cd != null)
+               {
+                  msg = "REMOVED: \n" + cd.toString();
+               }
+               else
+               {
+                  msg = "No CD with title: \"" + input + "\" found";
+               }
+               show(msg);
+               break;
+            case "Search":
+               input = get("Title");
+               if (input == null)
+                  return;
+               msg = "";
+               CdList list = cdList.getCdsByTitle(input);
+               for (int i = 0; i < list.getNumberOfCds(); i++)
+               {
+                  msg += list.getCD(i) + "\n";
+               }
+               if (list.getNumberOfCds() == 0)
+               {
+                  msg = "No CD with title: \"" + input + "\" found";
+               }
+               show(msg);
+               break;
+            case "Quit":
+               System.out.println("Quit");
+               break;
+            default:
+               show("Wrong input");
+               break;
+         }
+         System.out.println("\nPress ENTER to continue...");
+         in.nextLine();
+      }
+		
+	}
+}

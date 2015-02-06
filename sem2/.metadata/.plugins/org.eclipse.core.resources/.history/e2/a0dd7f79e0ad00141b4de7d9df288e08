@@ -1,0 +1,12 @@
+package cd.controller;
+
+import cd.domain.mediator.CdModel;
+
+public class CdController 
+{
+	private CdModel model;
+	public CdController(CdModel model, CdView view)
+	{
+		
+	}
+}

@@ -1,0 +1,7 @@
+package cd.domain.mediator;
+
+public interface CdModel 
+{
+
+
+}

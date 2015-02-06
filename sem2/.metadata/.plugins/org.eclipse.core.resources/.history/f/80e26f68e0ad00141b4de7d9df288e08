@@ -1,0 +1,7 @@
+package cd.controller;
+
+public class CdController 
+{
+	private CdModel model;
+	public CdController()
+}

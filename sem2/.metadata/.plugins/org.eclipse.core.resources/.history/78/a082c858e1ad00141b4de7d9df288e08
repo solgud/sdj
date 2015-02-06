@@ -1,0 +1,11 @@
+package cd.domain.mediator;
+
+public interface CdModel 
+{
+	public CdList getAll();
+	public void addCD(Cd cd);
+	public Cd removeCD(int index);
+	public Cd getCD(String title);
+	public int getNumberOfCds();
+
+}

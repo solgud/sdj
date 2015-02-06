@@ -1,0 +1,13 @@
+package cd.domain.mediator;
+
+public class CdModelManager 
+{
+	private final String TEXT_FILE_NAME = "src/cds.txt";
+	private CdList cdList;
+	
+	public CdModelManager()
+	{
+		
+	}
+
+}

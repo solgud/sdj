@@ -1,0 +1,52 @@
+package cd.domain.mediator;
+
+import cd.domain.model.Cd;
+import cd.domain.model.CdList;
+
+public class CdModelManager implements CdModel 
+{
+	private final String TEXT_FILE_NAME = "src/cds.txt";
+	private CdList cdList;
+	private CdPersistence storage;
+	
+	public CdModelManager()
+	{
+         this.storage = new CdTextFile(this.TEXT_FILE_NAME);
+         this.cdList = storage.load();
+		
+	}
+
+	@Override
+	public CdList getAll() 
+	{
+		return this.cdList;
+	}
+
+	@Override
+	public void addCD(Cd cd) 
+	{
+		this.cdList.addCd(cd);
+	}
+
+	@Override
+	public void removeCD(int index) 
+	{
+		this.cdList.removeCdByIndex(index);
+	}
+
+	@Override
+	public Cd getCD(String title) 
+	{
+		// Looks like we're supposed to return just one cd
+		// But all the methods we can use return another cdlist
+		// So we'll just get the first one indexed
+		return this.cdList.getCdsByTitle(title).getCD(0);
+	}
+
+	@Override
+	public int getNumberOfCds() 
+	{
+		return this.cdList.getNumberOfCds();
+	}
+
+}
