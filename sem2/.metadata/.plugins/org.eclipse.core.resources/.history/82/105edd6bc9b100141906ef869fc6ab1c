@@ -1,0 +1,56 @@
+package utility.collection;
+
+public class ArrayStack<T> implements StackADT<T> {
+
+	private static final int DEFAULT_CAPACITY = 100;
+	private int top;
+	private T[] stack;
+	private int[] ints;
+	
+	public ArrayStack() {
+		this.top = 0;
+		this(DEFAULT_CAPACITY);
+	}
+	
+	public ArrayStack(int initialCapacity) {
+		this.stack = (T[]) new Object[initialCapacity];
+	}
+
+	@Override
+	public void push(T element) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public T pop() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public T peek() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int indexOf(T element) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+}

@@ -1,7 +1,6 @@
 package cd.domain.mediator;
 
 import java.io.IOException;
-
 import cd.domain.model.Cd;
 import cd.domain.model.CdList;
 

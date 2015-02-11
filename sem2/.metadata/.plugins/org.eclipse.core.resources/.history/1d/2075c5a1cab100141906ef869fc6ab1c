@@ -1,0 +1,12 @@
+import utility.collection.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		ArrayStack<Integer> ints = new ArrayStack<Integer>();
+		ints.push(4);
+
+
+	}
+
+}
