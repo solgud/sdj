@@ -45,7 +45,7 @@ public class ArrayStack<T> implements StackADT<T> {
 
 	@Override
 	public int indexOf(T element) {
-		for(int i = size() - 1; i >= 0; i--) { // Starting from top
+		for(int i = 0 ; i < size(); i--) { // Starting from top
 			if(element.equals(stack[i])) { // If match is found
 				return i; // Return current index
 			}
@@ -71,7 +71,7 @@ public class ArrayStack<T> implements StackADT<T> {
 		return resultString;
 	}
 	
-	public void expandCapacity() {
+	private void expandCapacity() {
 		T[] expandedStack = (T[]) new Object[stack.length * 2];
 		for(int i = 0; i < stack.length; i++) {
 			expandedStack[i] = stack[i];
