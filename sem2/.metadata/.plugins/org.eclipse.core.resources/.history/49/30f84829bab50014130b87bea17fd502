@@ -1,0 +1,5 @@
+package statepattern;
+
+public class CarDriving extends CarState {
+
+}

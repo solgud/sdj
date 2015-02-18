@@ -1,0 +1,5 @@
+package statepattern;
+
+public abstract class CarState {
+
+}

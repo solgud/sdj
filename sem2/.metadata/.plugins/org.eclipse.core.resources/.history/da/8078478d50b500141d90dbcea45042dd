@@ -1,0 +1,17 @@
+
+public class Car {
+	private int powerOnCounter;
+
+	public Car() {
+		this.powerOnCounter = 0;
+	}
+	
+	turnOn() {
+		
+	}
+	
+	turnOff() {
+		
+	}
+
+}

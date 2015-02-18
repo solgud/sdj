@@ -1,0 +1,8 @@
+package statepattern;
+
+public interface CarConstants {
+	CarState FORWARD = new CarForward();
+
+	CarState OFF = new CarOff();
+
+}

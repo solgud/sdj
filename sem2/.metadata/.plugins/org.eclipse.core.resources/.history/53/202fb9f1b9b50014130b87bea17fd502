@@ -1,0 +1,14 @@
+package statepattern;
+
+public class Car implements CarConstants {
+	private CarState state = OFF;
+
+	public void pressButton() {
+		state.pressButton(this);
+	}
+	
+	public void setState(CarState state) {
+		this.state = state;
+	}
+
+}

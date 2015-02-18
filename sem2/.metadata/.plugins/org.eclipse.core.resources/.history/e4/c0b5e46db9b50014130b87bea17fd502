@@ -1,0 +1,10 @@
+package statepattern;
+
+public class Car {
+	private CarState state = OFF;
+
+	public void pressButton() {
+		
+	}
+
+}

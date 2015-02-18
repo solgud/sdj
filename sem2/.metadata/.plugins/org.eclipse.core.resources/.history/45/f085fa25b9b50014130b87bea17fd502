@@ -1,0 +1,6 @@
+package statepattern;
+
+public interface CarConstants {
+	CarState DRIVING = new CarState();
+
+}

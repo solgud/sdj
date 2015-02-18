@@ -1,0 +1,10 @@
+package statepattern;
+
+public abstract class CarState {
+
+	public void pressButton(Car car) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
