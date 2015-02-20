@@ -5,32 +5,35 @@ public class LinearNode<T> {
 	private LinearNode<T> next;
 
 	public LinearNode() {
+		element = null;
+		next = null;
 
 	}
 	
 	public LinearNode(T element) {
-		
+		this.element = element;
+		next = null;
 	}
 	
 	public LinearNode(T element, LinearNode<T> next) {
-		
+		this.element = element;
+		this.next = next;
 	}
 	
 	public LinearNode<T> getNext() {
-		
-		return null;
+		return next;
 	}
 	
 	public void setNext(LinearNode<T> node) {
-		
+		next = node;
 	}
 	
 	public T getElement() {
-		return null;
+		return element;
 	}
 	
 	public void setElement(T element) {
-		
+		this.element = element;
 	}
 
 
