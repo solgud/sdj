@@ -7,12 +7,11 @@ public class LinearNode<T> {
 	public LinearNode() {
 		element = null;
 		next = null;
-
 	}
 	
 	public LinearNode(T element) {
 		this.element = element;
-		next = null;
+		this.next = null;
 	}
 	
 	public LinearNode(T element, LinearNode<T> next) {

@@ -4,15 +4,14 @@ public class LinkedList<T> implements ListADT<T> {
 	private int count;
 	private LinearNode<T> front;
 
-	public LinkedList(){
+	public LinkedList() {
 		front = new LinearNode<T>(); // Dummy node
 		count = 0;
 	}
 
 	public LinearNode<T> getNode(int index) {
-
 		LinearNode<T> current = front; // Start at front node
-		for (int i = -1; i < index; i++) { 
+		for (int i = -1; i < index; i++) {
 			current = current.getNext(); // cycle through nodes
 		}
 		return current;
@@ -32,7 +31,12 @@ public class LinkedList<T> implements ListADT<T> {
 
 	@Override
 	public void add(T element) {
-		add(0, element); // Add to the front of the list
+		LinearNode<T> current = front;
+		while (current.getNext() != null) {
+			current = current.getNext();
+		}
+		current.setNext(new LinearNode<T>(element));
+		count++;
 	}
 
 	@Override
@@ -47,9 +51,8 @@ public class LinkedList<T> implements ListADT<T> {
 
 	@Override
 	public T remove(int index) {
-		
-		LinearNode<T> previous = getNode(index -1); // Get the node right before the one we want to delete
-		LinearNode<T> nodeToDelete = previous.getNext(); // Get the node we want ot delete
+		LinearNode<T> previous = getNode(index - 1); // Get the node right before the one we want to delete
+		LinearNode<T> nodeToDelete = previous.getNext(); // Get the node we want to delete
 		previous.setNext(nodeToDelete.getNext()); // Set the previous node to point to the node after the one we want to delete
 		nodeToDelete.setNext(null); // Remove the deleted node's pointer
 
@@ -58,31 +61,31 @@ public class LinkedList<T> implements ListADT<T> {
 
 	@Override
 	public T remove(T element) {
-		T elementToReturn = null;
-		LinearNode<T> current = front; // Start with the first node
-		for(int i = -1; i < count; i++) { // Go through the nodes
-			if(current.getElement() != null && current.getElement().equals(element)) { // If the node has a matching element
-				elementToReturn = current.getElement();
-				current.setElement(null); // Remove it (set to null)
-			}
-			current = current.getNext(); // Move to the next node
+		T elementToRemove = null;
+		int index = indexOf(element);
+
+		if (index > -1) {
+			elementToRemove = remove(index);
 		}
-		return elementToReturn; // Return the element (not sure why...)
+
+		return elementToRemove;
 	}
 
 	@Override
 	public int indexOf(T element) {
 		int index = 0; // Start index at 0
 		LinearNode<T> current = front; // Start with the first node
-		for(int i = -1; i < count; i++) { // Go through the nodes
-			if(element == null) { // If looking for a null element
-				if(current.getElement() == null) { // If the current node has a null element
+		while (current.getNext() != null) {
+			current = current.getNext(); // Move to the next node
+			if (element == null) { // If looking for a null element
+				if (current.getElement() == null) { // If the current node has a null element
 					return index; // Then return the current index
 				}
-			} else if(current.getElement() != null && current.getElement().equals(element)) { // If the node has a matching element
+			} else if (current.getElement() != null
+					&& current.getElement().equals(element)) { // If the node has a matching element
 				return index; // Return the current index
 			}
-			index++; // Increment the index
+			index++;
 		}
 		return -1; // If no match, return junk value
 	}
@@ -106,15 +109,16 @@ public class LinkedList<T> implements ListADT<T> {
 	public String toString() {
 		String str = "";
 		LinearNode<T> current = front; // Start with the first node
-		for(int i = -1; i < count; i++) { // Go through the nodes
-			if(current.getElement() == null) { // If current node has no element
+		while (current.getNext() != null) {
+			current = current.getNext(); // Move off of the dummy node
+			if (current.getElement() == null) { // If current node has no element
 				str += "Empty"; // Report as empty
 			} else {
 				str += current.getElement().toString(); // Otherwise, add element's toString to the string
 			}
+			str += "\n";
 		}
 		return str;
 	}
-
 
 }

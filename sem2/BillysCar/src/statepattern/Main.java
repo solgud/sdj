@@ -6,6 +6,18 @@ public class Main {
 		// TODO Auto-generated method stub
 		Car car = new Car();
 		System.out.println("Status is: " + car.getStatus());
+		car.pressButton();
+		System.out.println("Status is: " + car.getStatus());
+		car.pressButton();
+		System.out.println("Status is: " + car.getStatus());
+		car.pressButton();
+		System.out.println("Status is: " + car.getStatus());
+		car.pressButton();
+		System.out.println("Status is: " + car.getStatus());
+		car.pressButton();
+		System.out.println("Status is: " + car.getStatus());
+		car.pressButton();
+		System.out.println("Status is: " + car.getStatus());
 
 	}
 
