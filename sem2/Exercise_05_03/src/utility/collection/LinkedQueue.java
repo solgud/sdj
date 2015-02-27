@@ -36,7 +36,7 @@ public class LinkedQueue<T> implements QueueADT<T>
 	{
 		if(isEmpty())
 		{
-			throw new EmptyStackException();  // Should be an EmptyCollectionException...
+			throw new IllegalStateException();  
 		}
 		T currentElement = front.getElement(); // Get the element at the current front node
 
@@ -54,6 +54,10 @@ public class LinkedQueue<T> implements QueueADT<T>
 	@Override
 	public T first()
 	{
+		if(isEmpty())
+		{
+			throw new IllegalStateException();
+		}
 		return front.getElement();
 	}
 
