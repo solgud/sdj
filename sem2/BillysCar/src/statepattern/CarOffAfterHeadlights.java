@@ -1,12 +1,15 @@
 package statepattern;
 
-public class CarOffAfterHeadlights extends CarState {
+public class CarOffAfterHeadlights extends CarState
+{
 
-	public void pressButton(Car car) {
-		car.setState(null);
+	public void pressButton(Car car)
+	{
+		car.setState(BACKWARD);
 	}
 
-	public String getStatus() {
-		return "Off!";
+	public String getStatus()
+	{
+		return "Car is off";
 	}
 }

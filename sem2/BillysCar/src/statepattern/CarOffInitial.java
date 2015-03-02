@@ -1,18 +1,18 @@
 package statepattern;
 
-public class CarForward extends CarState
+public class CarOffInitial extends CarState
 {
 
 	@Override
 	public void pressButton(Car car)
 	{
-		car.setState(OFF_AFTER_FORWARD);
+		car.setState(FORWARD);
 	}
-
+	
 	@Override
 	public String getStatus()
 	{
-		return "Moving forwards!";
+		return "Car is off";
 	}
 
 }

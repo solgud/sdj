@@ -1,24 +1,16 @@
 package statepattern;
 
-public class Main {
+public class Main
+{
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void main(String[] args)
+	{
 		Car car = new Car();
-		System.out.println("Status is: " + car.getStatus());
-		car.pressButton();
-		System.out.println("Status is: " + car.getStatus());
-		car.pressButton();
-		System.out.println("Status is: " + car.getStatus());
-		car.pressButton();
-		System.out.println("Status is: " + car.getStatus());
-		car.pressButton();
-		System.out.println("Status is: " + car.getStatus());
-		car.pressButton();
-		System.out.println("Status is: " + car.getStatus());
-		car.pressButton();
-		System.out.println("Status is: " + car.getStatus());
-
+		for (int i = 0; i < 10; i++)
+		{
+			System.out.println("Status is: " + car.getStatus());
+			car.pressButton();
+		}
 	}
 
 }

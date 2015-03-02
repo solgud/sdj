@@ -1,17 +1,21 @@
 package statepattern;
 
-public class Car implements CarConstants {
-	private CarState state = OFF;
+public class Car implements CarConstants
+{
+	private CarState state = OFF_INITIAL;
 
-	public void pressButton() {
+	public void pressButton()
+	{
 		state.pressButton(this);
 	}
-	
-	public void setState(CarState state) {
+
+	public void setState(CarState state)
+	{
 		this.state = state;
 	}
-	
-	public String getStatus() {
+
+	public String getStatus()
+	{
 		return state.getStatus();
 	}
 
