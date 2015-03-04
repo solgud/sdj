@@ -1,20 +1,14 @@
 package utility.collection;
 
-public class ArrayQueue<T> implements QueueADT<T>
+public class BoundedArrayQueue<T> implements QueueADT<T>
 {
 
-	private static final int DEFAULT_CAPACITY = 100;
 	private int front;
 	private int count;
 	private int rear;
 	private T[] queue;
 
-	public ArrayQueue()
-	{
-		this(DEFAULT_CAPACITY);
-	}
-
-	public ArrayQueue(int initialCapacity)
+	public BoundedArrayQueue(int initialCapacity)
 	{
 		this.front = 0;
 		this.count = 0;
@@ -27,26 +21,11 @@ public class ArrayQueue<T> implements QueueADT<T>
 	{
 		if (size() == queue.length)
 		{
-			expandCapacity();
+			throw new IllegalStateException();
 		}
 		queue[rear] = element;
 		rear = (rear + 1) % queue.length;
 		count++;
-	}
-
-	private void expandCapacity()
-	{
-		T[] expandedArray = (T[]) new Object[queue.length * 2];
-
-		for (int i = 0; i < count; i++)
-		{
-			expandedArray[i] = queue[front];
-			front = (front + 1) % queue.length;
-		}
-		front = 0;
-		rear = count;
-		queue = expandedArray;
-
 	}
 
 	@Override
