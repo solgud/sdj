@@ -8,28 +8,22 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class BalanceCheckerTest {
-	BalanceChecker balanceChecker;
-
-	@Before
-	public void setUp() throws Exception {
-		balanceChecker = new BalanceChecker();
-	}
 
 	@Test
 	public void shouldIdentifyUnevenBraces() {
-		assertFalse(balanceChecker.check("{{}"));
-		assertFalse(balanceChecker.check("[[]"));
-		assertFalse(balanceChecker.check("(()"));
-		assertFalse(balanceChecker.check("{}}"));
-		assertFalse(balanceChecker.check("[]]"));
-		assertFalse(balanceChecker.check("())"));
+		assertFalse(BalanceChecker.check("{{}"));
+		assertFalse(BalanceChecker.check("[[]"));
+		assertFalse(BalanceChecker.check("(()"));
+		assertFalse(BalanceChecker.check("{}}"));
+		assertFalse(BalanceChecker.check("[]]"));
+		assertFalse(BalanceChecker.check("())"));
 	}
 	
 	@Test
 	public void shouldIdentifyEvenBraces() {
-		assertTrue(balanceChecker.check("{{}}"));
-		assertTrue(balanceChecker.check("[[]]"));
-		assertTrue(balanceChecker.check("(())"));
+		assertTrue(BalanceChecker.check("{{}}"));
+		assertTrue(BalanceChecker.check("[[]]"));
+		assertTrue(BalanceChecker.check("(())"));
 	}
 
 }
