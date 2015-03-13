@@ -4,6 +4,10 @@ import utility.collection.ArrayStack;
 import utility.collection.QueueADT;
 import utility.collection.StackADT;
 
+/*
+ * Implement a queue with two stacks.
+ */
+
 public class StackQueue<T> implements QueueADT<T> {
   private StackADT<T> inStack;
   private StackADT<T> outStack;
